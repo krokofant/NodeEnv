@@ -10,7 +10,7 @@ $nodeUrl = "https://nodejs.org/dist/$nodeVersion/node-$nodeVersion-win-x86.zip"
 $nodeSave = "nodejs.zip"
 $client = new-object System.Net.WebClient
 $client.DownloadFile($nodeUrl, $nodeSave)
-7z x -otemp .\nodejs.zip -r
+Expand-Archive -Path .\nodejs.zip -DestinationPath .\temp
 Get-ChildItem .\temp\node-v* | Rename-Item -NewName node
 
 ### Prettier
