@@ -2,7 +2,7 @@ $xml = ([xml](Get-Content .\nodeenv.nuspec))
 $nodeVersion = $xml.package.metadata.nodeVersion
 $prettierVersion = $xml.package.metadata.prettierVersion
 
-if(-not (Get-Item temp)) { mkdir temp }
+if(-not (Test-Path "$PSScriptRoot\temp")) { mkdir "$PSScriptRoot\temp" }
 
 ### NodeJS
 Write-Host "Downloading nodejs"
