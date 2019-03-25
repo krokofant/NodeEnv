@@ -10,11 +10,6 @@
     <description>Node.js for .NET projects</description>
     <releaseNotes>N/A</releaseNotes>
     <tags>Node Node.js NPM Integration</tags>
-
-    <!-- Node.js version to download -->
-    <nodeVersion>v10.13.0</nodeVersion>
-    <!-- Prettier version to download -->
-    <prettierVersion>"1.16.4"</prettierVersion>
   </metadata>
   <files>
     <file src="nodeenv.nuspec" />
