@@ -1,6 +1,6 @@
 $xml = ([xml](Get-Content .\nodeenv.nuspec))
-$nodeVersion = @($env:NODEVERSION, "v10.15.3") | Where-Object { -not ($_ -eq $null) }
-$prettierVersion = @($env:PRETTIERVERSION, "1.16.4") | Where-Object { -not ($_ -eq $null) }
+$nodeVersion = @($env:NODEVERSION, "v10.15.3") | Where-Object { -not ($_ -eq $null) } | Select-Object -First 1
+$prettierVersion = @($env:PRETTIERVERSION, "1.16.4") | Where-Object { -not ($_ -eq $null) } | Select-Object -First 1
 
 if(-not (Test-Path "$PSScriptRoot\temp")) { mkdir "$PSScriptRoot\temp" }
 
