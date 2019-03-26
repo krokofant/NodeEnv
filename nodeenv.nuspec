@@ -13,7 +13,7 @@
   </metadata>
   <files>
     <file src="nodeenv.nuspec" />
-    <file src="temp\**" />
+    <file src="temp\node\**" />
     <file src="UseNodeEnv.ps1" target="content\.node\" />
   </files>
 </package> 
