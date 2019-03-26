@@ -8,7 +8,7 @@
     <iconUrl>http://nodejs-cloud.com/img/128px/nodejs.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Node.js for .NET projects</description>
-    <releaseNotes>N/A</releaseNotes>
+    <releaseNotes>Node.js $nodeVersion$ environment with prettier $prettierVersion$ plugin</releaseNotes>
     <tags>Node Node.js NPM Integration</tags>
   </metadata>
   <files>
