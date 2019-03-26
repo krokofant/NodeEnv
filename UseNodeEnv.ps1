@@ -1,3 +1,4 @@
+$packageVersion = "#PACKAGEVERSION#"
 function Add-EnvPath {
     param(
         [Parameter(Mandatory = $true)]
@@ -9,7 +10,7 @@ function Add-EnvPath {
     }
 }
 
-$relPath = Join-Path (Join-Path ($PSScriptRoot) .) '..\..\..\packages\nodeenv.1.2.0\'
+$relPath = Join-Path (Join-Path ($PSScriptRoot) .) "..\..\..\packages\NodeEnv.$packageVersion\"
 $absPath = [System.IO.Path]::GetFullPath($relPath)
 
 # Add npm folder to path
