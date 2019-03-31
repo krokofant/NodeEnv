@@ -1,3 +1,5 @@
+$ErrorActionPreference = "Stop"
+
 $xml = ([xml](Get-Content .\nodeenv.nuspec))
 $id = $xml.package.metadata.id
 $version = (Get-Date -Format "yyyy.M.d")

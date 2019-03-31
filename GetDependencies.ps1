@@ -1,3 +1,5 @@
+$ErrorActionPreference = "Stop"
+
 $nodeVersion = @($env:NODEVERSION, "v10.15.3") | Where-Object { -not ($_ -eq $null) } | Select-Object -First 1
 $prettierVersion = @($env:PRETTIERVERSION, "1.16.4") | Where-Object { -not ($_ -eq $null) } | Select-Object -First 1
 
