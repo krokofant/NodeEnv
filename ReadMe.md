@@ -1,3 +1,5 @@
+![Prettier version](https://img.shields.io/npm/v/prettier.svg?label=Latest%20prettier)
+
 # Node.js for .NET projects via NuGet
 
 This NuGet package includes a globally installed [Prettier](https://prettier.io/) to be able to format files out of the box.
