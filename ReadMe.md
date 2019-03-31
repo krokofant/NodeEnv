@@ -1,8 +1,18 @@
-Node Environment Integration (Nuget Package)
-===========
+# Node.js for .NET projects via NuGet
 
-Nuget package source for integrating a node.js environment into a .NET project.
+This NuGet package includes a globally installed [Prettier](https://prettier.io/) to be able to format files out of the box.
 
-## Installation
+## Build your own
 
-For installation instructions, please visit https://www.nuget.org/packages/NodeEnv
+To specify a Node.js version or a prettier version you have two options:
+
+1. Override the default in `GetDependencies.ps1`
+2. Specify through environment variables
+   - `$env:NODEVERSION = "v10.15.3"`
+   - `$env:PRETTIERVERSION = "1.16.4"`
+
+To build you need to download the dependencies via `GetDependencies.ps1` and then build with `build.ps1`.
+
+## TODO
+
+1. Azure Artifacts instructions
