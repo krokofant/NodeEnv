@@ -1,5 +1,6 @@
 os: windows
 language: csharp
+mono: none
 install:
   - powershell -NoProfile -ExecutionPolicy Bypass .\GetDependencies.ps1
 script:
