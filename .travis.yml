@@ -2,6 +2,7 @@ os: windows
 language: csharp
 mono: none
 install:
+  - curl -L -o nuget.exe https://dist.nuget.org/win-x86-commandline/latest/nuget.exe
   - powershell -NoProfile -ExecutionPolicy Bypass ./GetDependencies.ps1
 script:
   - powershell -NoProfile -ExecutionPolicy Bypass ./build.ps1
