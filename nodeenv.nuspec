@@ -12,7 +12,7 @@
     <tags>Node Node.js NPM Integration</tags>
   </metadata>
   <files>
-    <file src="nodeenv.nuspec" />
+    <file src="temp\nodeenv.nuspec" />
     <file src="temp\node\**" />
     <file src="UseNodeEnv.ps1" target="content\.node\" />
   </files>
