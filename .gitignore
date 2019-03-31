@@ -1,3 +1,5 @@
 *.nupkg
 /build
 /temp
+/nodejs.zip
+/prettier.tgz

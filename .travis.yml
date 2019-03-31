@@ -1,0 +1,6 @@
+os: windows
+language: csharp
+install:
+  - powershell -NoProfile -ExecutionPolicy Bypass .\GetDependencies.ps1
+script:
+  - powershell -NoProfile -ExecutionPolicy Bypass .\build.ps1

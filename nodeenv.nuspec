@@ -16,4 +16,4 @@
     <file src="temp\node\**" />
     <file src="UseNodeEnv.ps1" target="content\.node\" />
   </files>
-</package> 
+</package>
