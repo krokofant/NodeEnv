@@ -11,8 +11,12 @@ $nodeUrl = "https://nodejs.org/dist/$nodeVersion/node-$nodeVersion-win-x86.zip"
 $client = New-Object System.Net.WebClient
 $client.DownloadFile($nodeUrl, "nodejs.zip")
 Write-Host "Extracting nodejs"
-# Expand-Archive -Path .\nodejs.zip -DestinationPath .\temp
-7z.exe x -otemp .\nodejs.zip -r
+if ((Get-Command 7z -ErrorAction Ignore)) {
+    7z.exe x -otemp .\nodejs.zip -r
+}
+else {
+    Expand-Archive -Path .\nodejs.zip -DestinationPath .\temp
+}
 Get-ChildItem .\temp\node-v* | Rename-Item -NewName node
 
 ### Prettier
