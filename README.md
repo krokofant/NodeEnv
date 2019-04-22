@@ -107,7 +107,7 @@ Add-EnvPath($pathToLatestNodeEnv)
 
 ## Opt-in script for Prettier pre-commit hook
 
-Usage: `[RepositoryRoot]/.powershell/pre-commit.ps1`
+Usage: `[RepositoryRoot]/.powershell/pre-commit.ps1 -AddHooks`
 
 ```powershell
 # This should be called from a pre-commit hooks with the following contents
