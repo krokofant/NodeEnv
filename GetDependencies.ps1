@@ -1,5 +1,6 @@
 $ErrorActionPreference = "Stop"
 
+$nodeVersion = @($env:NODEVERSION, "v10.16.0") | Where-Object { -not ($_ -eq $null) } | Select-Object -First 1
 $prettierVersion = @($env:PRETTIERVERSION, "1.18.2") | Where-Object { -not ($_ -eq $null) } | Select-Object -First 1
 
 if (-not (Test-Path "$PSScriptRoot\temp")) { mkdir "$PSScriptRoot\temp" }
