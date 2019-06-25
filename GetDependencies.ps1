@@ -7,7 +7,7 @@ if (-not (Test-Path "$PSScriptRoot\temp")) { mkdir "$PSScriptRoot\temp" }
 
 ### NodeJS
 Write-Host "Downloading nodejs $nodeVersion"
-$nodeUrl = "https://nodejs.org/dist/$nodeVersion/node-$nodeVersion-win-x86.zip"
+$nodeUrl = "https://nodejs.org/dist/$nodeVersion/node-$nodeVersion-win-x64.zip"
 $client = New-Object System.Net.WebClient
 $client.DownloadFile($nodeUrl, "nodejs.zip")
 Write-Host "Extracting nodejs"
