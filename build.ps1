@@ -9,6 +9,10 @@ if ($env:TRAVIS_BUILD_NUMBER.Count -gt 0) {
     $version = "$env:Build_BuildNumber" # azure pipeline
 }
 
+(Get-Content .\UseNodeEnv.ps1).Replace(
+    '#PACKAGEVERSION#', $version
+) | Out-File .\temp\UseNodeEnv.ps1
+
 nuget.exe pack .\temp\nodeenv.nuspec -BasePath .\ -Version $version -OutputDirectory build -NoPackageAnalysis
 $hash = (Get-FileHash ".\build\$id.$version.nupkg" -Algorithm SHA512).Hash.ToLower()
 $hash | Out-File ".\build\$id.$version.nupkg.sha512"
